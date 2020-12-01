@@ -50,11 +50,22 @@ fn find_sum_and_multiply_several(input:&Vec<i32>, sum_to_find:i32) -> i32{
 }
 #[cfg(test)]
 mod tests{
+    use std::fs::File;
+    use std::io::{BufReader, Read, BufRead};
+    use crate::find_sum_and_multiply;
+    use std::io;
 
     #[test]
-    fn test_from_example(){
+    fn test_from_example()->io::Result<()>{//input and output given by the example output in the puzzle
+        let file = File::open("src/test01.txt")?;
+        let mut reader = BufReader::new(file);
+        let lines = reader.by_ref().lines();
+        let input_vec:Vec<i32> = lines.map(|i| i.ok().unwrap().parse().unwrap()).collect();
 
+        let result = find_sum_and_multiply(&input_vec, 2020);
         let solution = 514579;
+        assert_eq!(solution,result);
+        Ok(())
     }
 
 }
