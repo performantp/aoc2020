@@ -7,7 +7,7 @@ use regex::Regex;
 fn main() -> io::Result<()> {
     let input = read_input("src/day02.txt");
     let input2 = read_input("src/day02.txt");
-    //println!("solution part1: {}", count_compliant_lines(parse_input(input),is_compliant));
+    println!("solution part1: {}", count_compliant_lines(parse_input(input),is_compliant));
     println!("solution part2: {}", count_compliant_lines(parse_input(input2),is_compliant_positions));
     println!("execution finished");
 
