@@ -21,7 +21,6 @@ fn main() -> io::Result<()> {
     println!("solution part2: {}", count_valid_passports(input2, has_all_valid_fields));
     println!("part 2 took {}ms", now2.elapsed().as_millis());
 
-
     Ok(())
 }
 
