@@ -1,0 +1,11 @@
+[package]
+name = "day07"
+version = "0.1.0"
+authors = ["performantp <performantp@performant.ch>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+daggy="0.7.0"
+regex="1"
